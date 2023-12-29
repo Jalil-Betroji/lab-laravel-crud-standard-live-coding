@@ -27,23 +27,49 @@ This repository presents a standard Laravel project for task management.
 ```bash
 cp .env.example .env
 ```
-2. Add the database name to the .env file.
+2. commands to create tables 
 
-3. Migrate tables to the database:
+```bash
+php artisan make:migration create_projects_table
+php artisan make:migration create_tasks_table
+```
+3. commands to create models
+
+```bash
+php artisan make:model Project
+php artisan make:model Task
+```
+
+4. commands to create controller
+
+```bash
+php artisan make:controller ProjectsController
+php artisan make:controller TasksController
+```
+5. commands to create Request
+
+```bash
+php artisan make:request ValidateRequest
+```
+
+
+6. Add the database name to the .env file.
+
+7. Migrate tables to the database:
 
 ```bash
 php artisan migrate
 
 ```
 
-4. Populate the database with project information by creating a seeder and executing:
+8. Populate the database with project information by creating a seeder and executing:
 
 ```bash
 php artisan db:seed
 ```
 
 
-5. To view your project's progress locally, run this command:
+9. To view your project's progress locally, run this command:
 
 ```bash 
 php artisan serve
