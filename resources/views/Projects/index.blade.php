@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="float-sm-right">
-                        <a href="{{ route('create') }}" class="btn btn-sm btn-primary">Ajouter tâche</a>
+                        <a href="" class="btn btn-sm btn-primary">Ajouter tâche</a>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                                             <option value="Filtrer par projet">Filtrer par projet</option>
                                             @foreach ($Projects as $Project)
                                                 <option value="{{ $Project->id }}" name="{{ $Project->id }}">
-                                                    {{ $Project->name }}
+                                                    {{ $Project->nom }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -47,11 +47,12 @@
                             </div>
                         </div>
                         <div id="search_ajax">
-                            @include('table')
+                            @include('Projects.table')
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 @endsection
