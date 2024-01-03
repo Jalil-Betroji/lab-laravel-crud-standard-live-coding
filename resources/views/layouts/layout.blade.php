@@ -40,7 +40,6 @@
     
         <div class='content-wrapper' style='min-hieght:1302.4px'>@yield('content')</div>
     
-   
     </div>
    
 
